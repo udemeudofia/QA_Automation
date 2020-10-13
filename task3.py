@@ -6,9 +6,8 @@ print('Test case started ....')
 driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.maximize_window()
 driver.get('http://the-internet.herokuapp.com/challenging_dom')
-time.sleep(3)
 
-def to_highlight(element, duration, color, border_size):
+def to_highlight(element, color, border_size, duration=0.5):
     """Highlights a web element"""
     driver = element._parent
     def apply_style(s):
@@ -26,14 +25,13 @@ t3 = driver.find_element_by_xpath(f"{table_path}/tr[3]/td[7]/a[1]")
 t4 = driver.find_element_by_xpath(f"{table_path}/tr[8]/td[4]")
 t5 = driver.find_element_by_xpath(f"{table_path}/tr[8]/td[1]")
 
-to_highlight(t1, 2, 'red', 5)
-to_highlight(t2, 2, 'red', 5)
-to_highlight(t3, 2, 'red', 5)
-to_highlight(t4, 2, 'red', 5)
-to_highlight(t5, 2, 'red', 5)
+to_highlight(t1, 'red', 5)
+to_highlight(t2, 'red', 5)
+to_highlight(t3, 'red', 5)
+to_highlight(t4, 'red', 5)
+to_highlight(t5, 'red', 5)
 # time.sleep(2)
 driver.find_element_by_css_selector('a.button.success').send_keys(Keys.ENTER)
 
-time.sleep(5)
 driver.close()
 print('Test case finished ....')
