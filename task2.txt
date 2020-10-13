@@ -1,0 +1,13 @@
+The function, print_list() will not correctly print out the elements of a_list.
+This is beacuse Python list uses zero-indexing, but from the function, the loop is done from index-1 instead of index-0.
+
+This can be fixed by changing the function.
+From:
+	def print_list(a_list):
+	    for i in range(1, len(a_list)):
+	        print('Element {} = {}'.format(str(i),str(a_list[i])))
+
+To:
+	def print_list(a_list):
+	    for i in range(len(a_list)):
+		print('Element {} = {}'.format(str(i+1),str(a_list[i])))
