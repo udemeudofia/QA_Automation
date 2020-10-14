@@ -4,6 +4,12 @@
 
 # Bytecode cache files
 __pycache__/
+.pytest_cache
 
 # Project configuration files
 .idea/
+
+# Test output
+task/results/
+
+task/upper_case_file_.py
