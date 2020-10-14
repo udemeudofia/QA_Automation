@@ -1,0 +1,13 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+
+# Bytecode cache files
+__pycache__/
+
+# Project confiration files
+/inspectionProfiles/
+/misc.xml
+/modules.xml
+/QA_Automation.iml
+/vcs.xml
