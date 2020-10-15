@@ -10,6 +10,4 @@ __pycache__/
 .idea/
 
 # Test output
-task/results/
-
-task/upper_case_file_.py
+task/test/results/

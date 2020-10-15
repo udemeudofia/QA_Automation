@@ -1,5 +1,5 @@
 The function, print_list() will not correctly print out the elements of a_list.
-This is beacuse Python list uses zero-indexing, but from the function, the loop is done from index-1 instead of index-0.
+This is because Python list uses zero-indexing, but from the function, the loop is done from index-1 instead of index-0.
 
 This can be fixed by changing the function.
 From:
