@@ -1,6 +1,6 @@
 import pytest
 from click.testing import CliRunner
-import upper_case_file
+from task.upper_case_file import upper_case_file
 
 runner = CliRunner()
 

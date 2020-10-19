@@ -1,13 +1,8 @@
-from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.keys import Keys
 
 
-def task_1(url_):
+def task_1(url_, driver):
     print('Test case started ....')
-    driver = webdriver.Chrome(ChromeDriverManager().install())
-    driver.maximize_window()
-    # url_ = 'https://www.tiketa.lt/EN/search'
     driver.get(url_)
     driver.find_element_by_name('sf_TextFilter').send_keys('Panic')
     driver.find_element_by_xpath("//*[@id='dropdownMenu3']").send_keys(Keys.ARROW_DOWN)
@@ -18,7 +13,7 @@ def task_1(url_):
     driver.implicitly_wait(2)
     driver.find_element_by_id('btnBuy-22396').click()
     driver.find_element_by_xpath("//*[@id='main-container']/div/div/div/div[2]/div/div[1]/div/div[12]/div[2]/div/div[4]/div/div/a").click()
-    driver.close()
+    # driver.close()
     return 'Test case finished ....'
 
 
