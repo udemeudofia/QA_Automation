@@ -1,3 +1,7 @@
+# pylint: disable=no-value-for-parameter
+"""
+This module verifies the conversion of a file to upper case
+"""
 import click
 
 
@@ -15,6 +19,7 @@ import click
     help="Output text file path",
 )
 def upper_case_file(input_file, output_file):
+    """This handles the conversion and writing the result"""
     print(f"Converting {input_file} file to upper case in {output_file}!")
 
     with open(input_file, "r") as input_f:
@@ -24,5 +29,5 @@ def upper_case_file(input_file, output_file):
     print("Done!")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     upper_case_file()
